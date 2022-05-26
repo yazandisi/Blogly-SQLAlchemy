@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{user.first_name}} Details</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <img src="{{user.img_url}}" alt="Profile Picture" />
+    <h1>{{user.first_name}} {{user.last_name}} Details</h1>
+    <div>
+      <form action="/edit_user/{{user.id}}"><button>Edit</button></form>
+      <form action="/delete_user/{{user.id}}" method="POST">
+        <button>Delete</button>
+      </form>
+    </div>
+    <br />
+    <a href="/">Go Back</a>
+  </body>
+</html>
